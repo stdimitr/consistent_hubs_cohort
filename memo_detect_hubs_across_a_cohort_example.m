@@ -1,9 +1,5 @@
 
-%%% add the pathway to your BCT software
-addpath(genpath('C:\Users\mpnsd\Desktop\SOFTWARE\BCT\2019_03_03_BCT'))
 
-
-%% run an example per subject
 %cohort_wbn is 3D matrix that tabulates the weighted brain networks
 % of the whole cohort
 [no_subjs N N]=size(cohort_wbn);
@@ -21,7 +17,8 @@ hubs_list_score=zeros(no_subjs,N);
   
   
 %% CREATE A CO-OCCURENCE MATRIX OF SIZE ROIS X ROIS THAT COUNTS
-%% HOW MANY TIMES EACH PAIR OF ROIS IS ENCOUNTERED AS HUB
+%% HOW MANY TIMES EACH PAIR OF ROIS IS ENCOUNTERED SIMULTANEOUSLY 
+%% AS HUB ACROSS THE COHORT
 
 co_occurence=zeros(N,N);
 
