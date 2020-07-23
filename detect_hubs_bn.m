@@ -1,4 +1,4 @@
-function hubs_list=detect_hubs_bn(wbn,threshold)
+function [hubs_list hubs_list_score]=detect_hubs_bn(wbn,threshold)
 
 
 %% detect hubs from a brain network
@@ -27,6 +27,8 @@ function hubs_list=detect_hubs_bn(wbn,threshold)
 
 %% OUPUT : hubs_list = a vector equals the size of ROIs with 1s (HUBS) 
 %%            AND 0s (NON-HUBS)
+%%        hubs_list_score = keeps the total score of every node across
+%%                          the four network metrics sorted lists
 
 
 %Dimitriadis Stavros 2020
@@ -37,6 +39,8 @@ function hubs_list=detect_hubs_bn(wbn,threshold)
 %Tracking brain dynamics via time-dependent network analysis. 
 %Journal of Neuroscience Methods Volume 193, Issue 1, 30 October 2010,
 %Pages 145-155
+
+%%% A NEW STUDY WILL BE LISTED SOON ....
 
 % % The  betweenness centrality and global efficiency is computed using an auxiliary connection-length
 %   matrix L, defined as L_ij = 1/W_ij - 1 for all nonzero L_ij.
@@ -127,7 +131,9 @@ hubs_list=zeros(1,N);
 hubs_list(union(r1,r2))=1;
 
 
-
+%% Score of Hubs Across the four networm metrics sorted lists
+hubs_list_score=zeros(1,N);
+hubs_list_score=sum([vec12;vec34]);
 
 
 
