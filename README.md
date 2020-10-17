@@ -10,4 +10,6 @@ REFERENCES:
 Tracking brain dynamics via time-dependent network analysis. Journal of Neuroscience Methods 
 Volume 193, Issue 1, 30 October 2010,Pages 145-155
 
-[2] A new study will be published soon used this approach and will update this reference list
+[2] Clark H, Messaritaki E, Dimitriadis SI, Metzler-Baddeley C (2020).
+Dementia risk factors modify hubs but leave other connectivity measures unchanged in asymptomatic individuals: a graph theoretical analysis.
+doi: https://doi.org/10.1101/2020.10.08.331025
